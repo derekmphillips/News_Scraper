@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Scraper</title>
+  <style>
+  #unread, #read{
+    width:40%;
+    background-color: antiquewhite;
+  }
+  #unread{
+    float:left;
+  }
+  #read{
+    float:right;
+  }
+  table, td{
+    border: 1px solid black;
+  }
+  #wrapper{
+    padding-top: 10%;
+    text-align: center;
+    width: 960px;
+    margin: 0 auto;
+  }
+  body{
+    background-color: #C0FFEE;
+    font-family: sans-serif;
+  }
+  #results{
+    margin-top:50px;
+  }
+  #userinput{
+    font-size: 24px;
+  }
+  input {
+    width:50%;
+    height:36px;
+    font-size: 24px;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>News Scraper</h1>
+    <h2><i>Scrape your news here for the most up to date news!</i></h2>
+    <form id="userinput">
+        <input type="text" id="title" placeholder="News Title"/>
+      <br />
+        <input type="text" id="author" placeholder="Date/Time Stamp"/>
+      <br />
+      <button type="submit" id="addnote">Add New</button>
+    </form>
+    <div id="results">
+      <table id="unread">
+            <tr><th>Title</th><th>Date/Time Stamp</th><th>Notes</th></tr>
+      </table>
+      <table id="read">
+            <tr><th>Title</th><th>Date/Time Stamp</th><th>Notes</th></tr>
+      </table>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
